@@ -1,5 +1,6 @@
 import requests
 
+print('LLAPI was started')
 
 def prison(act, token):
     url = "http://api.lazerlast.ru/prison.php?player="+act+"&token="+token+"&format=json"
