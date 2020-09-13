@@ -1,2 +1,2 @@
 import lazerlastapi
-from lazerlastapi import prison
+from .lazerlastapi import prison
