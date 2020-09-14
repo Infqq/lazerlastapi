@@ -34,7 +34,7 @@ class LW:
                 self._token = token
 
         def get(self, name: str):
-                url = "http://api.lazerlast.ru/prison.php?player="+name+"&token="+self._token+"&format=json"
+                url = "http://api.lazerlast.ru/luckywars.php?player="+name+"&token="+self._token+"&format=json"
                 r = requests.get(url).json()
                 try:
                         result = 'Ник: ' + r['username'] + '\nБаланс: ' + r['money'] + '\nУбийств: ' + r['kills'] + '\nСмертей: ' + r['deaths'] + '\nПобеды: ' + r['wins']
@@ -47,7 +47,7 @@ class LOBBY:
                 self._token = token
 
         def get(self, name: str):
-                url = "http://api.lazerlast.ru/prison.php?player="+name+"&token="+self._token+"&format=json"
+                url = "http://api.lazerlast.ru/lobby.php?player="+name+"&token="+self._token+"&format=json"
                 r = requests.get(url).json()
                 try:        
                         result = 'Ник: ' + r['username'] + '\nОпыт: ' + r['exp'] + '\nКоины: ' + r['coin'] + '\nУровень: ' + r['level']
