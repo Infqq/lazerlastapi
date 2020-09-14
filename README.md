@@ -5,7 +5,8 @@
 
 
 #### Пример:
-```from lazerlastapi import PRISON
+```
+from lazerlastapi import PRISON
 check = PRISON(token='qURJ1mWziP6qU6RnHIYolIhot8cZRgCf')
 result = check.get('_GameDoctor_')
 print(result)
