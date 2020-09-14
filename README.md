@@ -7,7 +7,7 @@
 #### Пример:
 ```
 from lazerlastapi import PRISON
-check = PRISON(token='qURJ1mWziP6qU6RnHIYolIhot8cZRgCf')
+check = PRISON(token='test')
 result = check.get('_GameDoctor_')
 print(result)
 ```
