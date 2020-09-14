@@ -10,7 +10,10 @@ class PRISON:
         def get(self, name: str):
                 url = "http://api.lazerlast.ru/prison.php?player="+name+"&token="+self._token+"&format=json"
                 r = requests.get(url).json()
-                result = 'Ник: ' + r['username'] + '\nОпыт: ' + r['exp'] + '\nБаланс: ' + r['balance'] + '\nУровень: ' + r['level'] + '\nБлоки: ' + r['blocks'] + '\nКристаллы: ' + r['crist'] + '\nКрысы: ' + r['rats']
+                try:
+                        result = 'Ник: ' + r['username'] + '\nОпыт: ' + r['exp'] + '\nБаланс: ' + r['balance'] + '\nУровень: ' + r['level'] + '\nБлоки: ' + r['blocks'] + '\nКристаллы: ' + r['crist'] + '\nКрысы: ' + r['rats']
+                except:
+                        result = r['error']
                 return result
 
 class MLF:
@@ -20,7 +23,10 @@ class MLF:
         def get(self, name: str):
                 url = "http://api.lazerlast.ru/mlf.php?player="+name+"&token="+self._token+"&format=json"
                 r = requests.get(url).json()
-                result = 'Ник: ' + r['username'] + '\n$/сек: ' + r['production'] + '\nБаланс: ' + r['balance']
+                try:
+                        result = 'Ник: ' + r['username'] + '\n$/сек: ' + r['production'] + '\nБаланс: ' + r['balance']
+                except:
+                        result = r['error']
                 return result
 
 class LW:
@@ -30,7 +36,10 @@ class LW:
         def get(self, name: str):
                 url = "http://api.lazerlast.ru/prison.php?player="+name+"&token="+self._token+"&format=json"
                 r = requests.get(url).json()
-                result = 'Ник: ' + r['username'] + '\nБаланс: ' + r['money'] + '\nУбийств: ' + r['kills'] + '\nСмертей: ' + r['deaths'] + '\nПобеды: ' + r['wins']
+                try:
+                        result = 'Ник: ' + r['username'] + '\nБаланс: ' + r['money'] + '\nУбийств: ' + r['kills'] + '\nСмертей: ' + r['deaths'] + '\nПобеды: ' + r['wins']
+                except:
+                        result = r['error']
                 return result
         
 class LOBBY:
@@ -40,5 +49,8 @@ class LOBBY:
         def get(self, name: str):
                 url = "http://api.lazerlast.ru/prison.php?player="+name+"&token="+self._token+"&format=json"
                 r = requests.get(url).json()
-                result = 'Ник: ' + r['username'] + '\nОпыт: ' + r['exp'] + '\nКоины: ' + r['coin'] + '\nУровень: ' + r['level']
+                try:        
+                        result = 'Ник: ' + r['username'] + '\nОпыт: ' + r['exp'] + '\nКоины: ' + r['coin'] + '\nУровень: ' + r['level']
+                except:
+                        result = r['error']
                 return result
