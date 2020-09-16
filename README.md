@@ -1,5 +1,5 @@
 <h1 align="center">LazerLastApi - удобная библиотека для LLAPI</h1>
-    <blockquote>Это библиотека, упрощающая работу с LazerLastApi, находится в постояннной разроботке</blockquote>
+    <blockquote>Это библиотека, упрощающая работу с LazerLastApi, находится в постояннной разработке</blockquote>
 </p>
 <hr>
 
