@@ -54,3 +54,16 @@ class LOBBY:
                 except:
                         result = r['error']
                 return result
+
+class PLAYER:
+        def __init__(self, token: str):
+                self._token = token
+
+        def get(self, name: str):
+                url = "http://api.lazerlast.ru/online.php?player="+name+"&token="+self._token+"&format=json"
+                r = requests.get(url).json()
+                try:        
+                        result = 'Ник: ' + name + '\nСтатус: ' + r['status']
+                except:
+                        result = r['error']
+                return result
