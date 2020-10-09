@@ -1,8 +1,5 @@
 import requests
 
-print('LLAPI was started')
-print()
-
 class PRISON:
         def __init__(self, token: str):
                 self._token = token
