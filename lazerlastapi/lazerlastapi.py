@@ -83,4 +83,4 @@ class TEST:
                         rats = '\nКрысы: ' + r['rats']
                 except:
                         result = r['error']
-                return result
+                return result, username, exp, balance, level, blocks, crist, rats
