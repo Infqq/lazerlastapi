@@ -1,10 +1,10 @@
 import requests
 
-class PLAYER:
+
+class lazerlastapi:
         def __init__(self, token: str):
                 self._token = token
 
-        def get(self, name: str):
-                url = "http://api.lazerlast.ru/player.php?player="+name+"&token="+self._token+"&format=json"
-                r = requests.get(url).json()
-                return r
+        def player(self, nickname: str):
+                r = requests.get("http://api.lazerlast.ru/player.php?player="+nickname+"&token="+self._token+"&format=json").json()
+                return r.text
