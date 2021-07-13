@@ -6,5 +6,5 @@ class lazerlastapi:
                 self._token = token
 
         def player(self, nickname: str):
-                r = requests.get(f"http://api.lazerlast.ru/player.php?token={self._token}&player={nickname}")
-                return (r.text).json()
+                r = requests.get(f"http://api.lazerlast.ru/player.php?token={self._token}&player={nickname}").json()
+                return r
